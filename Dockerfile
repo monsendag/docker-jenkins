@@ -7,7 +7,7 @@ RUN echo deb http://pkg.jenkins-ci.org/debian binary/ >> /etc/apt/sources.list
 RUN apt-get install -y wget
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
 RUN apt-get update
-RUN apt-get install -y jenkins git qemu-user-static
+RUN apt-get install -y jenkins git qemu-user-static maven
 
 # now we install docker in docker - thanks to https://github.com/jpetazzo/dind
 RUN echo deb http://archive.ubuntu.com/ubuntu precise universe > /etc/apt/sources.list.d/universe.list
